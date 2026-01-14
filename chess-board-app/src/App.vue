@@ -109,6 +109,8 @@ const resetBoard = () => {
           draggable="true"
           @dragstart="handleDragStart($event, index)"
           @dragend="handleDragEnd"
+          @dragover.prevent
+          @drop="handleDrop($event, index)"
         >
           {{ pieceLabels[square.piece.type] }}
         </div>
